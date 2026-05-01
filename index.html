@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M.Dinesh | Portfolio</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        :root{
+            --primary: #7b5cff;
+            --primary-glow: rgba(123, 92, 255, 0.7);
+            --bg-dark: #050d26;
+            --text-light: #ffffff;
+            --text-gray: #bdbdbd;
+        }
+
+        body{
+            background: var(--bg-dark);
+            color: var(--text-light);
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+
+        header{
+            width: 100%;
+            padding: 20px 8%;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo{
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        nav ul{
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active{
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+
+        .hero{
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 4rem 8%;
+            position: relative;
+        }
+
+        /* Background Dots */
+
+        .hero::before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(rgba(255,255,255,0.15) 1px, transparent 1px);
+            background-size: 35px 35px;
+            z-index: -1;
+        }
+
+        .hero-container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5rem;
+            flex-wrap: wrap;
+        }
+
+        /* Image */
+
+        .hero-image{
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            border: 4px solid var(--primary);
+            padding: 6px;
+            box-shadow: 0 0 30px var(--primary-glow);
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .hero-image img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            border-radius: 50%;
+        }
+
+        /* Content */
+
+        .hero-content{
+            max-width: 650px;
+        }
+
+        .hero-content h2{
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .hero-content h1{
+            font-size: 5rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .hero-content h3{
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #d0d0d0;
+            font-weight: 400;
+        }
+
+        .hero-content p{
+            color: var(--text-gray);
+            line-height: 1.8;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Button */
+
+        .btn{
+            display: inline-block;
+            padding: 14px 30px;
+            border: 1px solid var(--primary);
+            border-radius: 30px;
+            text-decoration: none;
+            color: white;
+            transition: 0.3s ease;
+        }
+
+        .btn:hover{
+            background: var(--primary);
+            box-shadow: 0 0 20px var(--primary-glow);
+        }
+
+        /* Core Expertise */
+
+        .page-section{
+            padding: 5rem 8%;
+            text-align: center;
+        }
+
+        .section-title{
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: white;
+        }
+
+        .skill-grid{
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .skill-tag{
+            padding: 14px 28px;
+            border: 1px solid var(--primary);
+            border-radius: 30px;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .skill-tag:hover{
+            background: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        /* Footer */
+
+        footer{
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #aaa;
+        }
+
+        /* Responsive */
+
+        @media(max-width: 900px){
+
+            .hero-container{
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-content h1{
+                font-size: 3.5rem;
+            }
+
+            .hero-content h3{
+                font-size: 1.5rem;
+            }
+
+            nav{
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul{
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <!-- Navbar -->
+
+    <header>
+        <nav>
+            <div class="logo">M.Dinesh</div>
+
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="certificates.html">Certificates</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+
+    <main class="hero">
+
+        <div class="hero-container">
+
+            <!-- Left Side Image -->
+
+            <div class="hero-image">
+                <img src="images/profile.jpeg" alt="M.Dinesh">
+            </div>
+
+            <!-- Right Side Content -->
+
+            <div class="hero-content">
+
+                <h2>WELCOME TO MY WORLD</h2>
+
+                <h1>M.Dinesh</h1>
+
+                <h3>Full Stack Developer | AI & DS Student</h3>
+
+                <p>
+                    Fusing AI innovation with modern Full Stack Development to build future-ready digital products.
+                    Turning complex ideas into smart, scalable, and interactive digital solutions.
+                    Creating next-level web experiences through intelligent design and advanced development.
+                </p>
+
+                <a href="contact.html" class="btn">Get in Touch</a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Skills Section -->
+
+    <section class="page-section">
+
+        <h2 class="section-title">Core Expertise</h2>
+
+        <div class="skill-grid">
+
+            <div class="skill-tag">Python</div>
+
+            <div class="skill-tag">MySQL</div>
+
+            <div class="skill-tag">AI & DS</div>
+
+            <div class="skill-tag">Full Stack</div>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer>
+        <p>&copy; 2026 M.Dinesh | Crafted with Excellence</p>
+    </footer>
+
+</body>
+</html>
